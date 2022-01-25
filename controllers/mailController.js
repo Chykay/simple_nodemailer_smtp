@@ -19,10 +19,10 @@ const sendMail= async(req, res) => {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: "no-reply@calmglobal.com", // sender address
+    from: '"Calm Global" <no-reply@kokomdapp.com>', // sender address
     to: req.body.receiver, // list of receivers
     subject: req.body.subject, // Subject line
-    text: req.body.message, // plain text body
+    html: req.body.message, // plain text body
     // html: "<b>Hello world?</b>", // html body
   }).then(function (response) {
     // console.log(response)
