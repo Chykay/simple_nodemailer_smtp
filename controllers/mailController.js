@@ -22,7 +22,7 @@ const sendMail= async(req, res) => {
     from: "'Calm Global' <no-reply@calmglobal.com>", // sender address
     to: req.body.receiver, // list of receivers
     subject: req.body.subject, // Subject line
-    html: req.body.message, // plain text body
+    text: req.body.message, // plain text body
     // html: "<b>Hello world?</b>", // html body
   }).then(function (response) {
     // console.log(response)
